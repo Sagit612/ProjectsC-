@@ -1,0 +1,15 @@
+@model Project.Models.Student[]
+
+@{
+    ViewBag.Title = "List of Students";
+    Layout = "_Layout";
+}
+@foreach (Student std in @Model) // @Model represents for returned data from @model Project.Models.Student[]
+{
+    <div class="text-center">
+        <h1 class="display-4">@std.Name</h1>
+        <h1 class="display-4">@std.Age</h1>
+        <h1 class="display-4">@std.Address</h1>
+    </div>
+}
+
